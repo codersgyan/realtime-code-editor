@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #FFFFFF;
     height: 100vh;
+    opacity: 1;
+    background: transparent;
 }
 
 .formWrapper {

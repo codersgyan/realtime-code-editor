@@ -1,0 +1,98 @@
+/*---------------------------------------------------------------------
+                        Mouse cursor
+-----------------------------------------------------------------------*/
+.theBall,
+.theBall-outer {
+  width: 20px;
+  height: 20px;
+}
+.theBall-outer {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 9999999999999999999;
+  pointer-events: none !important;
+}
+.theBall {
+  position: absolute;
+  background-color: rgba(255, 114, 114, 0.8);
+  border-radius: 50%;
+  -webkit-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center center;
+}
+.zooming.theBall {
+  background-color: #ff7272;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+}
+
+/*---------------------------------------------------------------------
+                        Mouse Effect
+-----------------------------------------------------------------------*/
+.mouse-move {
+  position: absolute;
+  bottom: -130px;
+  left: 50%;
+  width: 65px;
+  margin-left: -50px;
+}
+.mouse-move a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  display: inline-block;
+  border-radius: 900px;
+  text-align: center;
+}
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  content: "";
+  z-index: -1;
+  margin: 0;
+  border-radius: 900px;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+.mouse-move .boom::before {
+  animation-delay: -4s;
+}
+@keyframes clipMe {
+  0%,
+  100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 220px, 0px);
+  }
+  50% {
+    clip: rect(218px, 220px, 220px, 0px);
+  }
+  75% {
+    clip: rect(0px, 220px, 220px, 218px);
+  }
+}
+.banner_canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
