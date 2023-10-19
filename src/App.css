@@ -6,14 +6,16 @@
     height: 100vh;
     opacity: 1;
     background: transparent;
+    z-index: 2;
 }
 
 .formWrapper {
-    background: #282a36;
+    background:#0e0f1a;
     padding: 20px;
     border-radius: 10px;
     width: 400px;
     max-width: 90%;
+    z-index: 2;
 }
 
 footer {

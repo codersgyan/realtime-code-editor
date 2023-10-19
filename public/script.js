@@ -1586,7 +1586,7 @@ canvas.addEventListener("mousedown", () => {
         pointers[i].y = touches[i].pageY;
         pointers[i].color = generateColor();
     }
-}); */
+}); 
 
 /* window.addEventListener('mouseup', () => {
     pointers[0].down = false;
